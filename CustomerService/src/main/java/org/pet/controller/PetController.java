@@ -12,4 +12,5 @@ import static org.pet.constants.RestApiUrls.*;
 @RequestMapping(PET)
 public class PetController {
     private final PetService petService;
+
 }
