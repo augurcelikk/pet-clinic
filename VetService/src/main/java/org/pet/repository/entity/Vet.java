@@ -15,8 +15,9 @@ import lombok.NoArgsConstructor;
 public class Vet {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long id;
-    String name;
-    String surname;
+   private Long id;
+   private String name;
+   private String surname;
+   private String specialization;
 
 }
