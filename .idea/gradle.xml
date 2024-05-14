@@ -9,6 +9,8 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/AdminService" />
+            <option value="$PROJECT_DIR$/AppointmentService" />
             <option value="$PROJECT_DIR$/ConfigServer" />
             <option value="$PROJECT_DIR$/CustomerService" />
             <option value="$PROJECT_DIR$/VetService" />

@@ -2,4 +2,6 @@ rootProject.name = 'pet-clinic'
 include 'ConfigServer'
 include 'CustomerService'
 include 'VetService'
+include 'AdminService'
+include 'AppointmentService'
 
