@@ -25,6 +25,5 @@ public class Customer {
   private String phone;
   private String photo;
   private LocalDate birthDate;
-
-
+  private Long authId;
 }

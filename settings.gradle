@@ -5,4 +5,7 @@ include 'VetService'
 include 'AdminService'
 include 'AppointmentService'
 include 'CompanyService'
+include 'PetMicroService'
+include 'PetService'
+include 'AuthService'
 
