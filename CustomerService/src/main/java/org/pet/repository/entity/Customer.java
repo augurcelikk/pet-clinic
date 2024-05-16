@@ -26,4 +26,6 @@ public class Customer {
   private String photo;
   private LocalDate birthDate;
   private Long authId;
+  private Long petId;
+  private Long appointmentId;
 }

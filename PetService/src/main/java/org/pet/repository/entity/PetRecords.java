@@ -5,24 +5,16 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.pet.utility.enums.PetType;
-
-import java.time.LocalDate;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
 @Entity
-@Table(name = "tbl_pet")
-public class Pet {
+@Table(name = "tbl_pet_records")
+public class PetRecords {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-   private Long id;
-   private String name;
-   private PetType petType;
-   private String species;
-   private Long customerId;
-   private int age;
-   private LocalDate dateOfBirth;
+    Long id;
+
 }

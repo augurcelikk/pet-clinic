@@ -19,6 +19,7 @@ public class Company {
     String name;
     String address;
     String phone;
+    Long vetId;
 
 
 

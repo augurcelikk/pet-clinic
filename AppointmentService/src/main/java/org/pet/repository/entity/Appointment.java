@@ -7,6 +7,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 @Data
 @NoArgsConstructor
@@ -21,5 +22,11 @@ public class Appointment {
     Long vetId;
     Long customerId;
     LocalDate appointmentDate;
+    Long petId;
+    LocalDateTime startTime;
+    LocalDateTime endTime;
+    boolean isAvailable;
+
+
     
 }

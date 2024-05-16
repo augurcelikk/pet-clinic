@@ -18,6 +18,11 @@ public class Vet {
    private Long id;
    private String name;
    private String surname;
+   private String email;
+   private String phone;
+   private Long companyId;
+   private Long appointmentId;
    private String specialization;
+
 
 }
