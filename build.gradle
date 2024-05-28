@@ -44,12 +44,10 @@ allprojects {
         testImplementation('org.junit.jupiter:junit-jupiter')
         testImplementation('org.mockito:mockito-inline:+')
     }
-
     test{
         useJUnitPlatform()
     }
 }
-
 configurations {
     compileOnly {
         extendsFrom annotationProcessor
