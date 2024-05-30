@@ -11,6 +11,10 @@ spring:
     hibernate:
       ddl-auto: create
 my-application:
-  customer-end-point: http://localhost:9093/vet
+  vet-end-point: http://localhost:9093/vet
   secret-key: "bAjAfl&ato9ruwrichlyUc1Lfaprafr8soNoCr!BramaTR7mojicr1wRI0*oC3is"
   secret-key-2: ${SECRETKEY}
+my-auth-application:
+    auth-end-point: http://localhost:9090/auth
+    secret-key: "bAjAfl&ato9ruwrichlyUc1Lfaprafr8soNoCr!BramaTR7mojicr1wRI0*oC3is"
+    secret-key-2: ${SECRETKEY}

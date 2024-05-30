@@ -49,7 +49,7 @@ public class AuthService {
     }
 
     public String login(LoginRequestDto dto){
-        Optional<Auth> auth = repository.findOptionalByUserNameAndPassword(dto.getUserName(),dto.getPassword());
+        Optional<Auth> auth = repository.findOptionalByUserNameAndPassword(dto.getUsername(),dto.getPassword());
         if(auth.isEmpty()) throw new AuthException(ErrorType.USERNAME_PASSWORD_ERROR);
         /**
          * Kullanıcının authId bilgisi ile token üretiyoruz. Bu token bilgisini döneceğiz.

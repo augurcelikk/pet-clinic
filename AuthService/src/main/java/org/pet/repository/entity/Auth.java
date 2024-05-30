@@ -18,7 +18,7 @@ public class Auth {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
     @Column(unique = true,length = 64, nullable = false)
-    String userName;
+    String username;
     @Column(nullable = false,length = 128)
     String password;
     Long createAt;

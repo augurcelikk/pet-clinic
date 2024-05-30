@@ -1,6 +1,7 @@
 package org.pet.controller;
 
 import lombok.RequiredArgsConstructor;
+import org.pet.dto.request.LoginRequestDto;
 import org.pet.dto.request.VetSaveRequestDto;
 import org.pet.service.AdminService;
 import org.springframework.http.HttpStatus;
@@ -23,5 +24,10 @@ public class AdminController {
     public ResponseEntity<Void> createVet(@RequestBody VetSaveRequestDto dto){
         adminService.createVet(dto);
         return ResponseEntity.status(HttpStatus.CREATED).build();
+    }
+    @PostMapping("/login")
+    public ResponseEntity<String> login(@RequestBody LoginRequestDto loginRequest) {
+        String token = String.valueOf(adminService.login(loginRequest.getUsername(), loginRequest.getPassword()));
+        return ResponseEntity.ok(token);
     }
 }
