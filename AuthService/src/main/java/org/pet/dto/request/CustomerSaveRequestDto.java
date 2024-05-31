@@ -12,6 +12,6 @@ import lombok.NoArgsConstructor;
 @Data
 public class CustomerSaveRequestDto {
     @Size(min = 3)
-    String userName;
+    String username;
     Long authId;
 }

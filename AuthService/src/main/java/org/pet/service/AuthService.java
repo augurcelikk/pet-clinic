@@ -26,7 +26,7 @@ public class AuthService {
          * Yeni üye olmak için gelen userName veritabanında kayıtlı olup olmadığını
          * kontrol ediyoruz. Eğer kullanıcı kayıtlı ise hata fırlatıyoruz.
          */
-        repository.findOptionalByUserName(dto.getUserName())
+        repository.findOptionalByUsername(dto.getUsername())
                 .ifPresent(auth->{
                     throw new AuthException(ErrorType.KAYITLI_KULLANICI_ADI);
                 });
@@ -49,7 +49,7 @@ public class AuthService {
     }
 
     public String login(LoginRequestDto dto){
-        Optional<Auth> auth = repository.findOptionalByUserNameAndPassword(dto.getUsername(),dto.getPassword());
+        Optional<Auth> auth = repository.findOptionalByUsernameAndPassword(dto.getUsername(),dto.getPassword());
         if(auth.isEmpty()) throw new AuthException(ErrorType.USERNAME_PASSWORD_ERROR);
         /**
          * Kullanıcının authId bilgisi ile token üretiyoruz. Bu token bilgisini döneceğiz.
