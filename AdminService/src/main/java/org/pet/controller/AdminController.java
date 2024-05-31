@@ -3,6 +3,7 @@ package org.pet.controller;
 import lombok.RequiredArgsConstructor;
 import org.pet.dto.request.LoginRequestDto;
 import org.pet.dto.request.VetSaveRequestDto;
+import org.pet.dto.response.LoginResponseDto;
 import org.pet.service.AdminService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.HttpStatusCode;
@@ -26,8 +27,11 @@ public class AdminController {
         return ResponseEntity.status(HttpStatus.CREATED).build();
     }
     @PostMapping("/login")
-    public ResponseEntity<String> login(@RequestBody LoginRequestDto loginRequest) {
-        String token = String.valueOf(adminService.login(loginRequest.getUsername(), loginRequest.getPassword()));
-        return ResponseEntity.ok(token);
+    public ResponseEntity<LoginResponseDto> login(@RequestBody LoginRequestDto loginRequest) {
+        String token = adminService.login(loginRequest);
+        return ResponseEntity.ok(LoginResponseDto.builder()
+                        .isLogin(true)
+                        .token(token)
+                .build());
     }
 }
